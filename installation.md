@@ -39,7 +39,7 @@ From the **parent directory** of your repo:
 cd ~/PARENT-DIR
 wget https://rpg.ifi.uzh.ch/data/VID2E/pretrained_models.zip -O /tmp/pretrained_models.zip
 unzip /tmp/pretrained_models.zip -d v2e_marvin/
-rm -f /tmp/pretrained_models.zipzip
+rm -f /tmp/pretrained_models.zip
 ```
 
 ## 2) Why two conda envs
@@ -53,24 +53,34 @@ The repo uses an old TensorFlow stack for the FILM/upsampling part, while the GP
 
 Create and activate:
 
-```baconda create -n vid2e python=3.9 -y
-conda activate vid2ed2e
+```bash
+conda create -n vid2e python=3.9 -y
+conda activate vid2e
 ```
 
-Install pybind11 (needed to compilesim_py_py` later):
+Install pybind11 (needed to compilesim_py later):
 
-```baconda install -y -c conda-forge pybind11d11
+```bash
+conda install -y -c conda-forge pybind11
 ```
 
 Install repo requirements (TF 2.6.x, matplotlib, etc. are pinned there):
 
-```bapip install -r requirements.txttxt
-
+```bash
+pip install -r requirements.txt
+```
 
 Sanity check on version 2.6:
 
 ```bash
 python -c "import tensorflow as tf; print(tf.__version__)"
+```
+
+(Required for GPU upsampling) Enable TensorFlow GPU
+Install cuDNN into the environment:
+
+```bash
+conda install -c anaconda cudnn
 ```
 
 ## 4) Env B: `vid2e_torch` (PyTorch GPU + ESIM GPU build)
