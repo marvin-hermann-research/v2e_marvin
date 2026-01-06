@@ -14,7 +14,7 @@ def render(x, y, t, p, shape):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser("""Generate events from a high frequency video stream""")
     parser.add_argument("--input_dir", default="")
-    parser.add_argument("--shape", nargs=2, default=[256, 320])
+    parser.add_argument("--shape", nargs=2, type=int, default=[256, 320])
     args = parser.parse_args()
 
     event_files = sorted(glob.glob(os.path.join(args.input_dir, "*.npz")))
@@ -31,5 +31,6 @@ if __name__ == "__main__":
         img = render(shape=args.shape, **events)
         handle.set_data(img)
         plt.pause(0.002)
+    plt.show()  # keep window open until manually closed
 
 
