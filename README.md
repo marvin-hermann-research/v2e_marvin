@@ -49,7 +49,7 @@ If you use this code in an academic context, please cite the original work:
 
 ## Installation
 
-For an indepth explaination see the [installation.md](intallation.md)
+For an indepth explaination see the [installation.md](installation.md)
 
 ## upsampling
 *This package provides code for adaptive upsampling with frame interpolation based on [Super-SloMo](https://people.cs.umass.edu/~hzjiang/projects/superslomo/)*
