@@ -47,7 +47,7 @@ rm -f /tmp/pretrained_models.zip
 The repo uses an old TensorFlow stack for the FILM/upsampling part, while the GPU-accelerated ESIM bindings require a modern PyTorch+CUDA toolchain; mixing both in one environment tends to break dependencies.​
 
 - **Env A (`vid2e`)**: TensorFlow/FILM/upsampling (CPU is fine; TF-GPU is optional and often painful).
-- **Env B (`vid2e_torch`)**: PyTorch + CUDA + ESIM GPU extensionesim_torchrch`).
+- **Env B (`vid2e_torch`)**: PyTorch + CUDA + ESIM GPU extentions (esim_torch).
 
 ## 3) Env A: `vid2e` (TensorFlow/FILM + upsampling)
 
@@ -58,7 +58,7 @@ conda create -n vid2e python=3.9 -y
 conda activate vid2e
 ```
 
-Install pybind11 (needed to compilesim_py later):
+Install pybind11 (needed to compil esim_py later):
 
 ```bash
 conda install -y -c conda-forge pybind11
