@@ -55,7 +55,7 @@ Arguments
 Renders a constant-FPS MP4 directly from the event stream using an exponential decay time-surface.
 
 ```bash
-conda activate vid2e
+conda activate vid2e_torch
 
 python visualization/render_events.py \
   --events_dir working_dir/events \
