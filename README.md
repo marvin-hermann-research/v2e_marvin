@@ -88,7 +88,7 @@ conda activate vid2e
 device=cpu
 CUDA_VISIBLE_DEVICES=$device python upsampling/upsample.py \
   --input_dir=working_dir/original_test_videos_5s/240p_bw \
-  --output_dir=example/upsampled
+  --output_dir=working_dir/upsampled
 ```
 
 ##### On GPU:
@@ -117,7 +117,7 @@ Execute in repo base directory:
 conda activate vid2e_torch
 
 python esim_torch/scripts/generate_events.py --input_dir=working_dir/upsampled \
-                                     --output_dir=example/events \
+                                     --output_dir=working_dir/events \
                                      --contrast_threshold_neg=0.2 \
                                      --contrast_threshold_pos=0.2 \
                                      --refractory_period_ns=0
