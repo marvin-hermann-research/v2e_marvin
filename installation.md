@@ -258,7 +258,7 @@ python -c "import esim_py; print('esim_py ok')"
 This verifies TensorFlow/FILM env is intact for upsampling.​
 
 ```bash
-conda activate
-vid2e python -c "import tensorflow as tf; print('tf', tf.__version__)"
+conda activate vid2e
+python -c "import tensorflow as tf; print('tf', tf.__version__)"
 ```
 
