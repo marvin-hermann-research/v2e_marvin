@@ -81,7 +81,7 @@ python -c "import tensorflow as tf; print(tf.__version__)"
 Install cuDNN into the environment:
 
 ```bash
-conda install -c anaconda cudnn
+conda install -y -c anaconda "cudnn=8.*"
 ```
 
 ## 4) Env B: `vid2e_torch` (PyTorch GPU + ESIM GPU build)
