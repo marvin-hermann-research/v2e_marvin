@@ -26,7 +26,7 @@ Restart the shell afterward.
 Clone repository (with submodules):
 
 ```bash
-git clone <https://github.com/marvin-hermann-research/v2e_marvin.git> --recursive
+git clone https://github.com/marvin-hermann-research/v2e_marvin.git --recursive
 cd <REPO_DIR>
 ```
 
