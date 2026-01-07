@@ -242,7 +242,8 @@ conda activate vid2e_torch
 This verifies (1) GPU torch works and (2) the CUDA extension (`esim_torch`) imports.​
 
 ```bash
-conda activate vid2e_torch python -c "import torch; print('cuda available:', torch.cuda.is_available()); print('torch cuda:', torch.version.cuda)" python -c "import esim_torch; print('esim_torch ok')"
+conda activate vid2e_torch
+python -c "import torch; print('cuda available:', torch.cuda.is_available()); print('torch cuda:', torch.version.cuda)" python -c "import esim_torch; print('esim_torch ok')"
 ```
 
 **Optional** (only if you want `esim_py` too):
@@ -257,6 +258,7 @@ python -c "import esim_py; print('esim_py ok')"
 This verifies TensorFlow/FILM env is intact for upsampling.​
 
 ```bash
-conda activate vid2e python -c "import tensorflow as tf; print('tf', tf.__version__)"
+conda activate
+vid2e python -c "import tensorflow as tf; print('tf', tf.__version__)"
 ```
 
