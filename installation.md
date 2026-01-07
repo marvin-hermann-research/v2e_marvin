@@ -67,7 +67,8 @@ conda install -y -c conda-forge pybind11
 Install repo requirements (TF 2.6.x, matplotlib, etc. are pinned there):
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -U "pip" "wheel" "setuptools<81"
+python -m pip install --no-build-isolation -r requirements.txt
 ```
 
 Sanity check on version 2.6:
