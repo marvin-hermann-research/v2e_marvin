@@ -1,7 +1,7 @@
 # Video to Events: Recycling Video Datasets for Event Cameras
 ## Extended Visualization & Comparison Tools
 
-**Extended and maintained by Marvin Hermann, Research Assistant at MaiRo Lab, Karlsruhe Institute of Technology (KIT)**
+**Extended and maintained by Marvin Hermann, HIWI at MaiRo Lab, Karlsruhe Institute of Technology (KIT)**
 
 This repository extends the original [Video to Events](https://github.com/uzh-rpg/rpg_vid2e) implementation by Gehrig et al. (CVPR 2020) with enhanced event visualization capabilities, including event-based video generation and side-by-side comparison tools for event-based vision research.
 
