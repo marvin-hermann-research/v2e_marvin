@@ -11,7 +11,6 @@ class EventVideoRenderer:
     """
     Render events (x,y,t,p) into a constant-FPS MP4.
 
-    Assumptions:
     - timestamps.txt contains seconds (float) -> converted to ns internally.
     - event t is already nanoseconds (int64).
     - p can be 0/1 or -1/+1; positive means p > 0.

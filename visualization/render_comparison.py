@@ -6,7 +6,7 @@ import tempfile
 
 
 def run_cmd(cmd, cwd=None):
-    subprocess.run(cmd, check=True, cwd=cwd)  # cwd controls how ../ paths are resolved [web:411]
+    subprocess.run(cmd, check=True, cwd=cwd)  # cwd controls how ../ paths are resolved
 
 
 
