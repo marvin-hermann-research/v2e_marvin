@@ -104,7 +104,7 @@ CUDA_VISIBLE_DEVICES=$device python upsampling/upsample.py \
 
 this will generate all between frames accoardingly to the paper. => one pixel position change equals one frame change
 
-### Event generating:
+### Event Generation:
 
 - **Input**: upsampled sequences `seq/imgs/*.png` + `seq/timestamps.txt` (seconds).​
 - **Output**: `seq/0000000000.npz ...` where each `.npz` stores arrays `t, x, y, p` (timestamp, pixel coords, polarity).​
@@ -121,6 +121,16 @@ python esim_torch/scripts/generate_events.py --input_dir=working_dir/upsampled \
                                      --contrast_threshold_neg=0.2 \
                                      --contrast_threshold_pos=0.2 \
                                      --refractory_period_ns=0
+```
+
+### Upsampling and Event Generation
+
+```bash
+python generate_events.py \
+  --video_input_dir working_dir/multiples_test \
+  --upsample_output_dir working_dir/upsampled \
+  --events_output_dir working_dir/events \ 
+  --device 0 --ct_pos 0.2 --ct_neg 0.2 --refractory_period_ns 0
 ```
 
 ### Event Visualization 

@@ -11,7 +11,7 @@ conda activate vid2e_torch
 
 python visualization/viz_events.py \
   --input_dir working_dir/events \
-  --shape 256 320
+  --shape 240 426
 ```
 
 Arguments
